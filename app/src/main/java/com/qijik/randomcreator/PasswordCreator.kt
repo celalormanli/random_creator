@@ -3,6 +3,7 @@ package com.qijik.randomcreator
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.*
 import kotlinx.android.synthetic.main.activity_password_creator.*
 import java.util.concurrent.ThreadLocalRandom
@@ -12,6 +13,8 @@ class PasswordCreator : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_password_creator)
+        supportActionBar?.setBackgroundDrawable(resources.getDrawable(R.drawable.main_background))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         var numberState: CheckBox = findViewById(R.id.numberState)
         var upperCaseState: CheckBox = findViewById(R.id.upperCaseState)
         var lowerCaseState: CheckBox = findViewById(R.id.lowerCaseState)
@@ -56,6 +59,10 @@ class PasswordCreator : AppCompatActivity() {
                 password.text = "Sayı gir"
             }
         }
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        onBackPressed()
+        return super.onOptionsItemSelected(item)
     }
 }
 

@@ -2,6 +2,7 @@ package com.qijik.randomcreator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -14,6 +15,8 @@ class NumberCreator : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_number_creator)
         var createNumber: Button = findViewById(R.id.createNumber)
+        supportActionBar?.setBackgroundDrawable(resources.getDrawable(R.drawable.main_background))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         var minNumber: EditText = findViewById(R.id.minNumber)
         var maxNumber: EditText = findViewById(R.id.maxNumber)
         var number: TextView = findViewById(R.id.number)
@@ -35,5 +38,9 @@ class NumberCreator : AppCompatActivity() {
                 }
             }
         }
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        onBackPressed()
+        return super.onOptionsItemSelected(item)
     }
 }

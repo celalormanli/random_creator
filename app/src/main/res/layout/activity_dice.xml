@@ -8,12 +8,6 @@
     android:background="@drawable/main_background"
     android:orientation="vertical"
     >
-    <TextView
-        android:id="@+id/dice"
-        android:layout_width="match_parent"
-        android:layout_height="51dp"
-        android:text="Dice" />
-
     <ImageView
         android:id="@+id/diceImage"
         android:layout_width="match_parent"
@@ -24,5 +18,9 @@
         android:layout_height="wrap_content"
         android:text="To Dice"
         />
+    <ImageView
+        android:id="@+id/diceImage1"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
 
 </LinearLayout>
