@@ -16,12 +16,14 @@
     <ImageView
         android:id="@+id/headsOrTailsImage"
         android:layout_width="match_parent"
-        android:layout_height="300dp" />
+        android:layout_height="300dp"
+    />
     <Button
         android:id="@+id/flipCoin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="flip"
+        android:background="@drawable/button"
         />
 
 </LinearLayout>

@@ -15,6 +15,7 @@ class PasswordCreator : AppCompatActivity() {
         setContentView(R.layout.activity_password_creator)
         supportActionBar?.setBackgroundDrawable(resources.getDrawable(R.drawable.main_background))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         var numberState: CheckBox = findViewById(R.id.numberState)
         var upperCaseState: CheckBox = findViewById(R.id.upperCaseState)
         var lowerCaseState: CheckBox = findViewById(R.id.lowerCaseState)
