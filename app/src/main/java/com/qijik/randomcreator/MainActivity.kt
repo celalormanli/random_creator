@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val intent = Intent(this, MainMenu::class.java)
         startActivity(intent)
+
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         onBackPressed()

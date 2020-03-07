@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.ActionBar
+import com.r0adkll.slidr.Slidr
 import kotlinx.android.synthetic.main.activity_random_color.view.*
 import java.util.concurrent.ThreadLocalRandom
 
@@ -20,6 +21,7 @@ class RandomColor : AppCompatActivity() {
         setContentView(R.layout.activity_random_color)
         supportActionBar?.setBackgroundDrawable(resources.getDrawable(R.drawable.main_background))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        Slidr.attach(this)
         var colorBackground:LinearLayout=findViewById(R.id.colorBackGround)
         colorBackground.setOnClickListener(View.OnClickListener {
             var r=ThreadLocalRandom.current().nextInt(0,256)

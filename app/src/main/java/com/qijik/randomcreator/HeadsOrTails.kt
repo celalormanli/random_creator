@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import com.r0adkll.slidr.Slidr
 import java.util.concurrent.ThreadLocalRandom
 
 class HeadsOrTails : AppCompatActivity() {
@@ -17,6 +18,7 @@ class HeadsOrTails : AppCompatActivity() {
         setContentView(R.layout.activity_heads_or_tails)
         supportActionBar?.setBackgroundDrawable(resources.getDrawable(R.drawable.main_background))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        Slidr.attach(this)
         var flipCoin:Button=findViewById(R.id.flipCoin)
         var tailsOrHeadsImage:ImageView=findViewById(R.id.headsOrTailsImage)
         var headsOrTails:TextView=findViewById(R.id.headsOrTails)

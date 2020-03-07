@@ -9,17 +9,19 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import java.util.concurrent.ThreadLocalRandom
-
+import com.r0adkll.slidr.Slidr
 class Dice : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dice)
+
         supportActionBar?.setBackgroundDrawable(resources.getDrawable(R.drawable.main_background))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         var diceImage:ImageView=findViewById(R.id.diceImage)
         var diceImage1:ImageView=findViewById(R.id.diceImage1)
         var toDice:Button=findViewById(R.id.toDice)
+        Slidr.attach(this)
         toDice.setOnClickListener {
             var coin = ThreadLocalRandom.current().nextInt(1,7)
             if(coin==1) {

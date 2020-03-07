@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.*
+import com.r0adkll.slidr.Slidr
 import kotlinx.android.synthetic.main.activity_password_creator.*
 import java.util.concurrent.ThreadLocalRandom
 
@@ -15,7 +16,7 @@ class PasswordCreator : AppCompatActivity() {
         setContentView(R.layout.activity_password_creator)
         supportActionBar?.setBackgroundDrawable(resources.getDrawable(R.drawable.main_background))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
+        Slidr.attach(this)
         var numberState: CheckBox = findViewById(R.id.numberState)
         var upperCaseState: CheckBox = findViewById(R.id.upperCaseState)
         var lowerCaseState: CheckBox = findViewById(R.id.lowerCaseState)

@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.r0adkll.slidr.Slidr
 import java.util.concurrent.ThreadLocalRandom
 
 class NumberCreator : AppCompatActivity() {
@@ -17,6 +18,7 @@ class NumberCreator : AppCompatActivity() {
         var createNumber: Button = findViewById(R.id.createNumber)
         supportActionBar?.setBackgroundDrawable(resources.getDrawable(R.drawable.main_background))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        Slidr.attach(this)
         var minNumber: EditText = findViewById(R.id.minNumber)
         var maxNumber: EditText = findViewById(R.id.maxNumber)
         var number: TextView = findViewById(R.id.number)
