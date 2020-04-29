@@ -7,6 +7,7 @@ import android.view.MenuItem
 import android.widget.*
 import com.r0adkll.slidr.Slidr
 import kotlinx.android.synthetic.main.activity_password_creator.*
+import kotlinx.android.synthetic.main.activity_password_creator.view.*
 import java.util.concurrent.ThreadLocalRandom
 
 class PasswordCreator : AppCompatActivity() {
@@ -17,13 +18,28 @@ class PasswordCreator : AppCompatActivity() {
         supportActionBar?.setBackgroundDrawable(resources.getDrawable(R.drawable.main_background))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         Slidr.attach(this)
+        var passLength:SeekBar=findViewById(R.id.passLength)
         var numberState: CheckBox = findViewById(R.id.numberState)
         var upperCaseState: CheckBox = findViewById(R.id.upperCaseState)
         var lowerCaseState: CheckBox = findViewById(R.id.lowerCaseState)
         var symbolState: CheckBox = findViewById(R.id.symbolState)
-        var passwordLength: EditText = findViewById(R.id.passwordLength)
         var createPassword: Button = findViewById(R.id.createPassword)
         var password: TextView = findViewById(R.id.password)
+        var passLenghtValue:TextView=findViewById(R.id.passLengthValue)
+        passLength?.setOnSeekBarChangeListener(object :
+            SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
+                passLenghtValue.text=(progress+5).toString()
+            }
+
+            override fun onStartTrackingTouch(seek: SeekBar) {
+
+            }
+
+            override fun onStopTrackingTouch(seek: SeekBar) {
+
+            }
+        })
         createPassword.setOnClickListener {
             var sArray: String = ""
             if (numberState.isChecked) {
@@ -38,13 +54,13 @@ class PasswordCreator : AppCompatActivity() {
             if (symbolState.isChecked) {
                 sArray = sArray + "!'+%&/()=?-#$}{][*/.:,;"
             }
-            if (!passwordLength.text.isEmpty()) {
-                if (passwordLength.text.toString().toInt() >=4  && passwordLength.text.toString().toInt() <= 50) {
+            if (!passLenghtValue.text.isEmpty()) {
+
                     if(!sArray.isEmpty())
                     {
                         var pass:String=""
                         var sLen:Int=sArray.length
-                        for(x in 1..passwordLength.text.toString().toInt())
+                        for(x in 1..passLenghtValue.text.toString().toInt())
                         {
                             var c:Char=sArray[ThreadLocalRandom.current().nextInt(0,sLen)]
                             pass=pass+c
@@ -54,9 +70,7 @@ class PasswordCreator : AppCompatActivity() {
                     else{
                         password.text="İçerik seç"
                     }
-                } else {
-                    password.text = "Belirtilen aralığı seç"
-                }
+
             } else {
                 password.text = "Sayı gir"
             }
