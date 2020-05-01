@@ -14,23 +14,33 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
+        android:hint="@string/min_number"
+
         />
     <EditText
         android:id="@+id/maxNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="number"
+        android:hint="@string/max_number"
+        />
     <Button
         android:id="@+id/createNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create"
+        android:text="@string/create"
         android:background="@drawable/button"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
         />
     <TextView
         android:id="@+id/number"
-        android:layout_width="match_parent"
-        android:layout_height="51dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
         android:text="NUMBER" />
 </LinearLayout>

@@ -21,15 +21,15 @@ class HeadsOrTails : AppCompatActivity() {
         Slidr.attach(this)
         var flipCoin:Button=findViewById(R.id.flipCoin)
         var tailsOrHeadsImage:ImageView=findViewById(R.id.headsOrTailsImage)
-        var headsOrTails:TextView=findViewById(R.id.headsOrTails)
+
         flipCoin.setOnClickListener {
             var coin = ThreadLocalRandom.current().nextInt(0,1000)
             if (coin%2==0) {
-                headsOrTails.text = "Heads"
+
                 tailsOrHeadsImage.setImageResource(R.drawable.head)
             }
             else {
-                headsOrTails.text = "Tails"
+
                 tailsOrHeadsImage.setImageResource(R.drawable.tail)
             }
         }

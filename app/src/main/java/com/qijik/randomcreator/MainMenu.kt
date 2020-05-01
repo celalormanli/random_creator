@@ -18,7 +18,7 @@ class MainMenu : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         var mainList:ListView=findViewById(R.id.mainList)
         val arrayAdapter:ArrayAdapter<*>
-        val menuList= arrayOf("Number Creator","Password Creator","Heads Or Tails","Dice","Random Color")
+        val menuList= arrayOf(resources.getString(R.string.number_creator),resources.getString(R.string.password_creator),resources.getString(R.string.heads_or_tails),resources.getString(R.string.dice),resources.getString(R.string.random_color))
         arrayAdapter= ArrayAdapter(this,android.R.layout.simple_list_item_1,menuList)
         mainList.adapter=arrayAdapter
         mainList.setOnItemClickListener { parent, view, position, id ->

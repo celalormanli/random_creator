@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Random Creator</string>
+    <string name="number_creator">Number Creator</string>
+    <string name="password_creator">Password Creator</string>
+    <string name="heads_or_tails">Heads Or Tails</string>
+    <string name="dice">Dice</string>
+    <string name="random_color">Random Color</string>
+    <string name="change_color">Touch screen to change color randomly</string>
+    <string name="to_dice">To Dice</string>
+    <string name="create">Create</string>
+    <string name="min_number">Minimum Number</string>
+    <string name="max_number">Maximum Number</string>
+    <string name="number">Number</string>
+    <string name="lower_case">Lower Case</string>
+    <string name="upper_case">Upper Case</string>
+    <string name="symbol">Symbol</string>
+    <string name="flip">Flip</string>
 </resources>

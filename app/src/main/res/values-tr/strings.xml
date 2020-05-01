@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Rastgele Oluşturucu</string>
+    <string name="number_creator">Sayı Oluştucu</string>
+    <string name="password_creator">Parola Oluşturucu</string>
+    <string name="heads_or_tails">Yazı Tura</string>
+    <string name="dice">Zar Atma</string>
+    <string name="random_color">Rastgele Renk</string>
+    <string name="change_color">Rastgele renk değiştirmek için ekrana dokun</string>
+    <string name="to_dice">Zar At</string>
+    <string name="create">Oluştur</string>
+    <string name="min_number">Küçük Sayı</string>
+    <string name="max_number">Büyük Sayı</string>
+    <string name="number">Sayı</string>
+    <string name="lower_case">Küçük Harf</string>
+    <string name="upper_case">Büyük Harf</string>
+    <string name="symbol">Sembol</string>
+    <string name="flip">Çevir</string>
+</resources>

@@ -11,17 +11,26 @@
     <ImageView
         android:id="@+id/diceImage"
         android:layout_width="match_parent"
-        android:layout_height="300dp" />
+        android:layout_height="200dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
     <Button
         android:id="@+id/toDice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="To Dice"
+        android:text="@string/to_dice"
         android:background="@drawable/button"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         />
     <ImageView
         android:id="@+id/diceImage1"
         android:layout_width="match_parent"
-        android:layout_height="300dp" />
+        android:layout_height="200dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"/>
 
 </LinearLayout>

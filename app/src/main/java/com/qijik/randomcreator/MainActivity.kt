@@ -12,8 +12,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         supportActionBar?.setBackgroundDrawable(resources.getDrawable(R.drawable.main_background))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        val intent = Intent(this, MainMenu::class.java)
-        startActivity(intent)
+        getSupportActionBar()?.hide();
+//        val intent = Intent(this, MainMenu::class.java)
+//        startActivity(intent)
 
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
