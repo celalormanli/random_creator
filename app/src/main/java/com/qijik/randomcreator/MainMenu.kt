@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import kotlin.system.exitProcess
 
 class MainMenu : AppCompatActivity() {
 
@@ -15,7 +16,7 @@ class MainMenu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_menu)
         supportActionBar?.setBackgroundDrawable(resources.getDrawable(R.drawable.main_background))
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         var mainList:ListView=findViewById(R.id.mainList)
         val arrayAdapter:ArrayAdapter<*>
         val menuList= arrayOf(resources.getString(R.string.number_creator),resources.getString(R.string.password_creator),resources.getString(R.string.heads_or_tails),resources.getString(R.string.dice),resources.getString(R.string.random_color))
@@ -48,5 +49,11 @@ class MainMenu : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         moveTaskToBack(true)
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onBackPressed() {
+        moveTaskToBack(true);
+        exitProcess(-1)
+        super.onBackPressed()
     }
 }
