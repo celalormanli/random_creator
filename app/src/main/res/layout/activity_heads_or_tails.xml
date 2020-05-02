@@ -7,25 +7,56 @@
     tools:context=".HeadsOrTails"
     android:background="@drawable/main_background"
     android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.1">
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.6">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="0.8">
+                <ImageView
+                    android:id="@+id/headsOrTailsImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="50dp"
+                    android:src="@drawable/tail"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+            </RelativeLayout><RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="0.2">
+            <Button
+                android:id="@+id/flipCoin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/flip"
+                android:background="@drawable/button"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                />
+        </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.3">
+    </RelativeLayout>
 
 
-    <ImageView
-        android:id="@+id/headsOrTailsImage"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-    />
-    <Button
-        android:id="@+id/flipCoin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/flip"
-        android:background="@drawable/button"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        />
+
 
 </LinearLayout>

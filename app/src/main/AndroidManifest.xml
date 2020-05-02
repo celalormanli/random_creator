@@ -9,13 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainMenu"></activity>
-        <activity android:name=".RandomColor" />
-        <activity android:name=".Dice" />
-        <activity android:name=".HeadsOrTails" />
-        <activity android:name=".PasswordCreator" />
-        <activity android:name=".NumberCreator" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainMenu"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".RandomColor"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Dice"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".HeadsOrTails"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PasswordCreator"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".NumberCreator"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
