@@ -15,4 +15,8 @@
     <string name="upper_case">Büyük Harf</string>
     <string name="symbol">Sembol</string>
     <string name="flip">Çevir</string>
+    <string name="fill_empty_fields">Boş alanları doldur</string>
+    <string name="numbers_cannot_be_equal">Sayılar eşit olamaz</string>
+    <string name="the_locations_of_the_numbers_are_wrong">Sayıların yerleri yanlış</string>
+    <string name="select_content">İçerik seç</string>
 </resources>

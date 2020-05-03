@@ -24,10 +24,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(baseContext, MainMenu::class.java)
             startActivity(intent)
         }, 2000)
-
-//        val intent = Intent(this, MainMenu::class.java)
-//        startActivity(intent)
-
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         onBackPressed()

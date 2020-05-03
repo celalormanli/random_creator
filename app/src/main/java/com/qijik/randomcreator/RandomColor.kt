@@ -14,6 +14,7 @@ import androidx.appcompat.app.ActionBar
 import com.r0adkll.slidr.Slidr
 import kotlinx.android.synthetic.main.activity_random_color.*
 import kotlinx.android.synthetic.main.activity_random_color.view.*
+import java.sql.Time
 import java.util.concurrent.ThreadLocalRandom
 
 class RandomColor : AppCompatActivity() {

@@ -24,7 +24,7 @@ class NumberCreator : AppCompatActivity() {
         var number: TextView = findViewById(R.id.number)
         createNumber.setOnClickListener {
             if (maxNumber.text.isEmpty() || minNumber.text.isEmpty()) {//TODO:Max sayı aralığı istenecek bide try catch eklenecek
-                Toast.makeText(this, "Boş alanları doldur", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, resources.getString(R.string.fill_empty_fields), Toast.LENGTH_SHORT).show()
             } else {
                 if (minNumber.text.toString().toInt() < maxNumber.text.toString().toInt()) {
                     number.text = ThreadLocalRandom.current().nextInt(
@@ -33,9 +33,9 @@ class NumberCreator : AppCompatActivity() {
                     ).toString()
                 } else {
                     if (minNumber.text.toString().toInt() == maxNumber.text.toString().toInt()) {
-                        Toast.makeText(this, "Sayılar eşit olamaz", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, resources.getString(R.string.numbers_cannot_be_equal), Toast.LENGTH_SHORT).show()
                     } else {
-                        Toast.makeText(this, "Sayı yerleri yanlış", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, resources.getString(R.string.the_locations_of_the_numbers_are_wrong), Toast.LENGTH_SHORT).show()
                     }
                 }
             }

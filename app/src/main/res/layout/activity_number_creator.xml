@@ -70,8 +70,7 @@
             android:textSize="50dp"
             android:paddingTop="50dp"
             android:textAlignment="center"
-            android:layout_gravity="center"
-            android:text="NUMBER" />
+            android:layout_gravity="center" />
         </LinearLayout>
     </RelativeLayout>
     <RelativeLayout

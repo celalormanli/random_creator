@@ -54,25 +54,19 @@ class PasswordCreator : AppCompatActivity() {
             if (symbolState.isChecked) {
                 sArray = sArray + "!'+%&/()=?-#$}{][*/.:,;"
             }
-            if (!passLenghtValue.text.isEmpty()) {
-
-                    if(!sArray.isEmpty())
-                    {
-                        var pass:String=""
-                        var sLen:Int=sArray.length
-                        for(x in 1..passLenghtValue.text.toString().toInt())
-                        {
-                            var c:Char=sArray[ThreadLocalRandom.current().nextInt(0,sLen)]
-                            pass=pass+c
-                        }
-                        password.text = pass
-                    }
-                    else{
-                        password.text="İçerik seç"
-                    }
-
-            } else {
-                password.text = "Sayı gir"
+            if(!sArray.isEmpty())
+            {
+                var pass:String=""
+                var sLen:Int=sArray.length
+                for(x in 1..passLenghtValue.text.toString().toInt())
+                {
+                    var c:Char=sArray[ThreadLocalRandom.current().nextInt(0,sLen)]
+                    pass=pass+c
+                }
+                password.text = pass
+            }
+            else{
+                password.text=resources.getString(R.string.select_content)
             }
         }
     }
