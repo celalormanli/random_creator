@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.r0adkll.slidr.Slidr
+import java.lang.Exception
 import java.util.concurrent.ThreadLocalRandom
 
 class NumberCreator : AppCompatActivity() {
@@ -23,9 +24,10 @@ class NumberCreator : AppCompatActivity() {
         var maxNumber: EditText = findViewById(R.id.maxNumber)
         var number: TextView = findViewById(R.id.number)
         createNumber.setOnClickListener {
-            if (maxNumber.text.isEmpty() || minNumber.text.isEmpty()) {//TODO:Max sayı aralığı istenecek bide try catch eklenecek
+            if (maxNumber.text.isEmpty() || minNumber.text.isEmpty()) {
                 Toast.makeText(this, resources.getString(R.string.fill_empty_fields), Toast.LENGTH_SHORT).show()
             } else {
+                try {
                 if (minNumber.text.toString().toInt() < maxNumber.text.toString().toInt()) {
                     number.text = ThreadLocalRandom.current().nextInt(
                         minNumber.text.toString().toInt(),
@@ -37,6 +39,9 @@ class NumberCreator : AppCompatActivity() {
                     } else {
                             Toast.makeText(this, resources.getString(R.string.the_locations_of_the_numbers_are_wrong), Toast.LENGTH_SHORT).show()
                     }
+                }
+            } catch (e: Exception){
+
                 }
             }
         }

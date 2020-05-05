@@ -33,8 +33,12 @@ class Dice : AppCompatActivity() {
         diceImage1.setImageResource(R.drawable.dice_1)
         Slidr.attach(this)
         val timer = Timer("schedule", true);
+        var btnClickable:Boolean=true
         toDice.setOnClickListener {
+            if(btnClickable==true){
+            btnClickable=false
             for(x in 1..25) {
+                println(x)
                 if (x<20) {
                     val handler = Handler(Looper.myLooper())
                     handler.postDelayed({
@@ -50,11 +54,14 @@ class Dice : AppCompatActivity() {
                         else{
                             diceImage.visibility = View.VISIBLE
                             diceImage1.visibility=View.VISIBLE
+                            if(x==25){
+                                btnClickable=true
+                            }
                         }
                     }, 250 * x.toLong())
                 }
                 }
-
+            }
 
             }
         }

@@ -23,29 +23,34 @@ class HeadsOrTails : AppCompatActivity() {
         Slidr.attach(this)
         var flipCoin:Button=findViewById(R.id.flipCoin)
         var tailsOrHeadsImage:ImageView=findViewById(R.id.headsOrTailsImage)
+        var btnClickable:Boolean=true
         flipCoin.setOnClickListener {
-            for(x in 1..25) {
-                if (x<20) {
-                    val handler = Handler(Looper.myLooper())
-                    handler.postDelayed({
-                        flipFun()
-                    }, 200 * x.toLong())
-                }else{
-                    val handler = Handler(Looper.myLooper())
-                    handler.postDelayed({
-                        if(x%2==0) {
-                            tailsOrHeadsImage.visibility = View.INVISIBLE
-                            tailsOrHeadsImage.visibility=View.INVISIBLE
-                        }
-                        else{
-                            tailsOrHeadsImage.visibility = View.VISIBLE
-                            tailsOrHeadsImage.visibility=View.VISIBLE
-                        }
-                    }, 250 * x.toLong())
+            if(btnClickable==true) {
+                btnClickable = false
+                for (x in 1..25) {
+                    if (x < 20) {
+                        val handler = Handler(Looper.myLooper())
+                        handler.postDelayed({
+                            flipFun()
+                        }, 200 * x.toLong())
+                    } else {
+                        val handler = Handler(Looper.myLooper())
+                        handler.postDelayed({
+                            if (x % 2 == 0) {
+                                tailsOrHeadsImage.visibility = View.INVISIBLE
+                                tailsOrHeadsImage.visibility = View.INVISIBLE
+                            } else {
+                                tailsOrHeadsImage.visibility = View.VISIBLE
+                                tailsOrHeadsImage.visibility = View.VISIBLE
+                                if (x == 25) {
+                                    btnClickable = true
+                                }
+
+                            }
+                        }, 250 * x.toLong())
+                    }
                 }
             }
-
-
         }
     }
     fun flipFun(){

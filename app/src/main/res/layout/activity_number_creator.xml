@@ -20,23 +20,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="0px"
                 android:layout_weight="0.33">
+
                 <EditText
                     android:id="@+id/minNumber"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:hint="@string/min_number"
                     android:inputType="number"
-                    android:hint="@string/min_number"/>
+                    android:maxLength="9" />
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="0px"
                 android:layout_weight="0.33">
+
                 <EditText
                     android:id="@+id/maxNumber"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:hint="@string/max_number"
                     android:inputType="number"
-                    android:hint="@string/max_number"/>
+                    android:maxLength="9" />
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
